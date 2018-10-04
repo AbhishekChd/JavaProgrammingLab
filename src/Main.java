@@ -4,7 +4,9 @@ import Lab03.Consumer;
 import Lab03.Item;
 import Lab03.Producer;
 import Lab04.OddIntegerException;
+import Lab07.ScientificCalculator;
 
+import javax.swing.*;
 import java.io.File;
 import java.util.Scanner;
 
@@ -15,6 +17,13 @@ public class Main {
         // executeLab03();
 
         // executeLab04();
+
+        ScientificCalculator calculator = new ScientificCalculator();
+        JFrame frame = new JFrame("App");
+        frame.setContentPane(calculator.rootView);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
     }
 
     private static void executeLab04() {
@@ -32,7 +41,7 @@ public class Main {
                 throw new OddIntegerException("Your name is odd!");
         } catch (OddIntegerException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             System.out.println("You're welcome");
         }
     }
