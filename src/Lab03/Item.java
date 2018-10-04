@@ -3,11 +3,11 @@ package Lab03;
 public class Item {
     private int content;
 
-    public int getContent() {
+    public synchronized int getContent() {
         return content;
     }
 
-    public void setContent(int content) {
+    public synchronized void setContent(int content) {
         this.content = content;
     }
 }
